@@ -1,19 +1,17 @@
-#Tasksテーブル
-##モデル名
-###・Taskモデル
-##カラム名・データ型
-###・name(string)
-###・content(text)
-###・deadline(date)
-###・priority(string)
-###・status(string)
+# Task
+|  Column    |  Type    |
+| ---------- | -------- |
+|  name      |  string  |
+|  content   |  text    |
+|  deadline  |  date    |
+|  priority  |  string  |
+|  status    |  string  |
+<br>
 
-#Usersテーブル
-##モデル名
-###・Taskモデル
-##カラム名・データ型
-###・name(string)
-###・email(string)
-###・password-digest(string)
-
-
+# User
+|  Column    |  Type    |
+| ---------- | -------- |
+|  name      |  string  |
+|  email     |  text    |
+|  password-digest  |  string |
+<br>
