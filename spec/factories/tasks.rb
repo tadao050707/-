@@ -3,6 +3,4 @@ FactoryBot.define do
     name { 'task_name' }
     content { 'task_content' }
   end
-
-  
 end
