@@ -4,6 +4,9 @@
 ##カラム名・データ型
 ###・name(string)
 ###・content(text)
+###・deadline(date)
+###・priority(string)
+###・status(string)
 
 #Usersテーブル
 ##モデル名
@@ -13,7 +16,4 @@
 ###・email(string)
 ###・password-digest(string)
 
-#Labelsテーブル
-##Labelモデル
-###・user_id
-###・task_id
+
