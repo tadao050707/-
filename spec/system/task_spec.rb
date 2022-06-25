@@ -28,11 +28,11 @@ RSpec.describe 'タスク管理機能', type: :system do
 
   describe '詳細表示機能' do
     context '任意のタスク詳細画面に遷移した場合' do
-      before do
-        visit tasks_path
-      end
       it '該当タスクの内容が表示される' do
+        @task = FactoryBot.create(:task, name: 'name', content: 'content')
+        visit task_path(@task.id)
+      end
     end
   end
 end
-end
+
