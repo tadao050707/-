@@ -6,7 +6,7 @@ RSpec.describe 'タスク管理機能', type: :system do
         visit new_task_path
         fill_in 'task_name', with: 'task.name'
         fill_in 'task_content', with: 'task.content'
-        click_button 'Create Task'
+        click_button '新規登録'
       end
 
       it '正常に登録される' do
@@ -15,13 +15,18 @@ RSpec.describe 'タスク管理機能', type: :system do
     end
   end
 
-  describe '一覧表示' do
+  describe '一覧表示機能' do
     context '一覧画面にアクセスしたとき' do
       before do
         visit tasks_path
       end
 
       it '作成済みのタスクが表示されている' do
+      end
+    end
+    context 'タスクが作成日時の降順に並んでいる場合' do
+      it '新しいタスクが一番上に表示される' do
+        task_list = all('.task_row')
       end
     end
   end
