@@ -1,0 +1,14 @@
+ja:
+  tasks:
+    index:
+      name: 'タスク名'
+      content: 内容
+      created_at: 登録日時
+      link:
+        Show: 表示
+        Edit: 編集
+        Destroy: 削除
+        Back: 前画面
+      button:
+        Create: 新規登録実行
+        Update: 更新実行

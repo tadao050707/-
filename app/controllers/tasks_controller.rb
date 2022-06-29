@@ -14,7 +14,6 @@ class TasksController < ApplicationController
     if params[:sort_priority_high]
       @tasks = Task.all
       @tasks = Task.order(priority: :asc)
-
     end
 
     if params[:task].present?
@@ -29,6 +28,7 @@ class TasksController < ApplicationController
         @tasks = Task.where(status: params[:task][:status])
       end
     end
+    @tasks = @tasks.page(params[:page]).per(5)
   end
 
   def show

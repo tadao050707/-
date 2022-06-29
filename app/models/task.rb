@@ -4,6 +4,8 @@ class Task < ApplicationRecord
   validates :deadline, presence: true
   validates :status, presence: true
   validates :priority, presence: true
-  enum status:{ not_started_yet: 0, in_progress: 1, completed: 2 }
-  enum priority: { high: 0, middle: 1, low: 2 }
+  enum status:{ 未着手: 0, 進行中: 1, 完了: 2 }
+  enum priority: { 高: 0, 中: 1, 低: 2 }
+  scope :search_name, -> (name) {where("name LIKE ?", "%#{name}%")}
+  scope :search_status, -> (status) {where(status: status)}
 end

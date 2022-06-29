@@ -14,12 +14,14 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rails-i18n'
 gem 'enum_help'
 gem 'bootstrap'
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 5.0.0'
   gem 'factory_bot_rails'
   gem 'rexml'
+  gem 'pry-rails'
 end
 
 group :development do
