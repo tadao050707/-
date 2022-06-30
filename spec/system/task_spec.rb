@@ -18,7 +18,7 @@ RSpec.describe 'タスク管理機能', type: :system do
     context 'ステータス検索をした場合' do
       it "ステータスに完全一致するタスクが絞り込まれる" do
         visit tasks_path
-        select "未着手", from: "task_status"
+        select "未着手", from: "task[search_status]"
         click_on '検索'
         expect(page).to have_content '未着手'
       end
@@ -27,7 +27,7 @@ RSpec.describe 'タスク管理機能', type: :system do
       it "検索キーワードをタイトルに含み、かつステータスに完全一致するタスク絞り込まれる" do
         visit tasks_path
         fill_in 'task_name', with: 'task'
-        select "未着手", from: "task_status"
+        select "未着手", from: "task[search_status]"
         click_on '検索'
         expect(page).to have_content 'タスク名'
         expect(page).to have_content '未着手'
@@ -71,7 +71,7 @@ RSpec.describe 'タスク管理機能', type: :system do
         FactoryBot.create(:second_task, name: 'task2')
         FactoryBot.create(:third_task, name: 'task3')
         visit tasks_path
-        click_on '終了期限でソートする' 
+        click_on '終了期限' 
         visit tasks_path(sort_expired: "true")
         task_list = all('.task_list')
         expect(task_list[2]).to have_content 'task'
@@ -86,7 +86,7 @@ RSpec.describe 'タスク管理機能', type: :system do
         FactoryBot.create(:second_task, name: 'task2')
         FactoryBot.create(:third_task, name: 'task3')
         visit tasks_path
-        click_on '優先順位が高い順にソートする'
+        click_on '優先度'
         tasks_path(sort_priority_high: "true")
         sleep 1
         task_list = all('.task_list')

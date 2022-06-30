@@ -1,11 +1,11 @@
 ja:
   tasks:
     index:
-      name: 'タスク名'
+      name: タスク名
       content: 内容
       created_at: 登録日時
       link:
-        Show: 表示
+        Show: 確認
         Edit: 編集
         Destroy: 削除
         Back: 前画面

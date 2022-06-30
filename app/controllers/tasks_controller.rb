@@ -65,9 +65,8 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
-
     respond_to do |format|
-      format.html { redirect_to tasks_url, notice: "タスクを削除しました" }
+      format.html { redirect_to tasks_url, notice: "本当に消していいですか？" }
     end
   end
 
