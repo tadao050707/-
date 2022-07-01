@@ -86,7 +86,7 @@ RSpec.describe 'タスク管理機能', type: :system do
         FactoryBot.create(:second_task, name: 'task2')
         FactoryBot.create(:third_task, name: 'task3')
         visit tasks_path
-        click_on '優先度'
+        click_on 'ステータス'
         tasks_path(sort_priority_high: "true")
         sleep 1
         task_list = all('.task_list')
