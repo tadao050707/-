@@ -95,6 +95,11 @@ RSpec.describe 'タスク管理機能', type: :system do
         expect(task_list[2]).to have_content 'task3'
       end
     end
+    context 'タスクが作成日時の降順に並んでいる場合' do
+      it '新しいタスクが一番上に表示される' do
+        task_list = all('.task_row')
+      end
+    end
   end
 
   describe '詳細表示機能' do
