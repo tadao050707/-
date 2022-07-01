@@ -3,6 +3,7 @@ require 'rails/all'
 
 Bundler.require(*Rails.groups)
 
+
 module BoardApp
   class Application < Rails::Application
     config.time_zone = 'Tokyo'

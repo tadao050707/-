@@ -22,6 +22,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'rexml'
   gem 'pry-rails'
+  gem 'faker'
 end
 
 group :development do

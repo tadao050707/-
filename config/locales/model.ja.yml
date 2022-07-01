@@ -4,11 +4,23 @@ ja:
       name: タスク名
       content: 内容
       created_at: 登録日時
-      link:
+      task_name: タスク検索
+      status_search: ステータス検索
+      selection: 選択してください
+      search: 検索
+      link_to:
         Show: 確認
         Edit: 編集
         Destroy: 削除
-        Back: 前画面
-      button:
-        Create: 新規登録実行
-        Update: 更新実行
+        Create: 新規登録
+    show:
+      content: 内容
+    edit:
+      editing: 編集する
+      show: 確認
+      back: 戻る
+      link_to:
+        Show: 確認
+        Back: 戻る
+    new:
+      new: 新規登録
